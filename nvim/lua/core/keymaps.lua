@@ -6,7 +6,7 @@ vim.g.mapleader = ' '
 k.set('n', '+', '<C-a>')
 k.set('n', '-', '<C-x>')
 
--- Yank a whole line with Y (
+-- Yank a whole line with Y
 k.set('n', 'Y', 'yy')
 
 k.set('n', '<F7>', ':make<CR>')
@@ -15,6 +15,14 @@ k.set('n', '<F9>', ':cprev<CR>')
 k.set('n', '<F10>', ':clist<CR>')
 k.set('n', '<ESC>', ':noh<CR><ESC>')
 
+-- nvim tree
+k.set("n", "<leader>e", ":NvimTreeToggle<CR>") -- toggle file explorer
+
 vim.api.nvim_set_keymap('n', '<C-P>',
     "<cmd>lua require('fzf-lua').files()<CR>",
     { noremap = true, silent = true })
+
+vim.api.nvim_set_keymap('n', '<C-R>',
+    "<cmd>lua require('fzf-lua').files()<CR>",
+    { noremap = true, silent = true })
+
